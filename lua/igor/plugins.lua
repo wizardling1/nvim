@@ -7,5 +7,4 @@ return {
 		dependencies = { {'nvim-tree/nvim-web-devicons'}}
 	},
 	{ 'marko-cerovac/material.nvim' },
-
 }

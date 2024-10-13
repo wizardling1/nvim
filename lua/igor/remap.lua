@@ -22,3 +22,10 @@ vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>")
 vim.keymap.set("n", "<leader>cc", ":Telescope colorscheme<CR>")
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+
+-- Scroll down 10 lines
+vim.keymap.set('n', '<C-j>', '10j', { noremap = true, silent = true })
+
+-- Scroll up 10 lines
+vim.keymap.set('n', '<C-k>', '10k', { noremap = true, silent = true })
+
