@@ -5,6 +5,7 @@ require("igor.nvim-tree")
 require("igor.treesitter")
 require("igor.telescope")
 require("igor.dashboard")
+require("igor.lsp")
 
 require("igor.remap")
 require("igor.basic")
