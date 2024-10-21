@@ -34,6 +34,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- select languages 
 require('lspconfig').clangd.setup({})
 require('lspconfig').pyright.setup({})
+require('lspconfig').html.setup({})
+require('lspconfig').cssls.setup({})
 require('lspconfig').ts_ls.setup({
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
   flags = {
