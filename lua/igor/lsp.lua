@@ -43,6 +43,22 @@ require('lspconfig').ts_ls.setup({
   },
 
 })
+require'lspconfig'.texlab.setup{
+    settings = {
+        texlab = {
+            build = {
+                onSave = false,
+            },
+            forwardSearch = {
+                executable = "open",  -- Command for forward search
+                args = { "-a", "Skim", "%p" },
+            },
+            chktex = {
+                onOpenAndSave = true,  -- Run linting on open and save
+            },
+        },
+    },
+}
 
 
 -- autocomplete setup
@@ -52,6 +68,7 @@ local luasnip = require('luasnip')
 cmp.setup({
   sources = {
     {name = 'nvim_lsp'},
+    {name = 'luasnip'},
   },
   mapping = cmp.mapping.preset.insert({
       ['<C-k>'] = cmp.mapping.select_prev_item({behavior = 'select'}),

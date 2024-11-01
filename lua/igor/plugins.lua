@@ -14,4 +14,28 @@ return {
     {'hrsh7th/nvim-cmp'},
     { 'L3MON4D3/LuaSnip' },  -- Snippet engine
     { 'saadparwaiz1/cmp_luasnip' }, -- Snippet completion source for nvim-cmp
+    { 'lervag/vimtex', config = function() 
+        -- Set Skim as the PDF viewer
+        vim.g.vimtex_view_method = 'skim'
+        vim.g.vimtex_view_skim_activate = 1
+
+        -- Use latexmk as the compiler
+        vim.g.vimtex_compiler_method = 'latexmk'
+        vim.g.vimtex_compiler_latexmk = {
+            options = { 
+                '-synctex=1', 
+                '-interaction=nonstopmode', 
+                '-file-line-error', 
+                '-pdf', 
+                '-silent'
+            },
+            continuous = 1,
+        }
+
+        -- Key mappings for compiling and stopping compilation
+        -- vim.keymap.set('n', '<leader>ll', ':%s/x/y/g', { silent = true })
+        -- vim.keymap.set('n', '<leader>ll', ':VimtexCompile<CR>', { silent = true })
+        -- vim.keymap.set('n', '<leader>lk', ':VimtexStop<CR>', { silent = true })
+    end
+    },
 }
