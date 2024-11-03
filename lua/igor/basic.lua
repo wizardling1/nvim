@@ -17,3 +17,10 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 4
 vim.opt.colorcolumn = "80"
 vim.opt.updatetime = 50
+
+vim.api.nvim_exec([[
+  if exists(':NoMatchParen')
+    NoMatchParen
+  endif
+]], false)
+
