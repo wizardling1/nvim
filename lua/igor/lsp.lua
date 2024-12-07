@@ -32,7 +32,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- select languages 
-require('lspconfig').clangd.setup({})
+require('lspconfig').clangd.setup({
+    cmd = {"clangd", "--query-driver=/usr/bin/g++" },
+})
 require('lspconfig').pyright.setup({})
 require('lspconfig').html.setup({})
 require('lspconfig').cssls.setup({})
