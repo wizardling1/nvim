@@ -25,7 +25,8 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent
 
 -- Scroll down 10 lines
 vim.keymap.set('n', '<C-j>', '10j', { noremap = true, silent = true })
-
+vim.keymap.set('v', '<C-j>', '10j', { noremap = true, silent = true })
 -- Scroll up 10 lines
 vim.keymap.set('n', '<C-k>', '10k', { noremap = true, silent = true })
+vim.keymap.set('v', '<C-k>', '10k', { noremap = true, silent = true })
 
