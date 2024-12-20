@@ -1,4 +1,5 @@
--- disable arrow keys
+
+vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
 
 -- Disable arrow keys in normal mode
 vim.keymap.set('n', '<Up>', '<NOP>')
