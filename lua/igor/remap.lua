@@ -31,3 +31,8 @@ vim.keymap.set('v', '<C-j>', '10j', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-k>', '10k', { noremap = true, silent = true })
 vim.keymap.set('v', '<C-k>', '10k', { noremap = true, silent = true })
 
+-- tabs
+vim.api.nvim_set_keymap('v', '<Tab>', '>gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<S-Tab>', '<gv', { noremap = true, silent = true })
+
+
