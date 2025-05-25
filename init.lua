@@ -6,7 +6,7 @@ require("igor.treesitter")
 require("igor.telescope")
 require("igor.dashboard")
 require("igor.lsp")
-
+require("igor.comments")
 require("igor.remap")
 require("igor.basic")
 require("igor.colorscheme")
