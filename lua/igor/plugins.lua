@@ -1,8 +1,8 @@
 return {
-	{ "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } },
-	{ "nvim-tree/nvim-tree.lua" },
-	{ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
-	{ 'nvimdev/dashboard-nvim', 
+	  { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" } },
+	  { "nvim-tree/nvim-tree.lua" },
+	  { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
+	  { 'nvimdev/dashboard-nvim', 
         event = 'VimEnter', 
 	    dependencies = { {'nvim-tree/nvim-web-devicons'}}
     },
@@ -46,20 +46,32 @@ return {
 		    'neovim/nvim-lspconfig',
 		    'nvim-lua/plenary.nvim',
 
-		    -- optional dependencies:
+        -- optional dependencies:
 
-		    -- a completion engine
-		    --    hrsh7th/nvim-cmp or Saghen/blink.cmp are popular choices
+        -- a completion engine
+        --    hrsh7th/nvim-cmp or Saghen/blink.cmp are popular choices
 
-		    -- 'nvim-telescope/telescope.nvim', -- for 2 Lean-specific pickers
-		    -- 'andymass/vim-matchup',          -- for enhanced % motion behavior
-		    -- 'andrewradev/switch.vim',        -- for switch support
-		    -- 'tomtom/tcomment_vim',           -- for commenting
-	    },
+        -- 'nvim-telescope/telescope.nvim', -- for 2 Lean-specific pickers
+        -- 'andymass/vim-matchup',          -- for enhanced % motion behavior
+        -- 'andrewradev/switch.vim',        -- for switch support
+        -- 'tomtom/tcomment_vim',           -- for commenting
+      },
 
-	    ---@type lean.Config
-	    opts = { -- see below for full configuration options
-		    mappings = true,
-	    }
-    } 
-}
+      ---@type lean.Config
+      opts = { -- see below for full configuration options
+        mappings = true,
+      }
+    },
+
+    {
+      "OXY2DEV/markview.nvim",
+      lazy = false,
+
+      -- For blink.cmp's completion
+      -- source
+      -- dependencies = {
+        --     "saghen/blink.cmp"
+        -- },
+      },
+    }
+
